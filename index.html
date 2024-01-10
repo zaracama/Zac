@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="style.css" />
+      <title>Make Your Own Playlist</title>
+      <link rel="icon" href="img/unnamed.ico" type="image/x=icon" />
+      <!-- logo icon -->
+   </head>
+
+   <body>
+      <div class="container">
+         <div class="input-form">
+            <img src="./img/.png" alt="" />
+            <form autocomplete="off">
+               <input type="hidden" id="indexlagu" />
+               <table>
+                  <div style="margin: 0 50px 0 0">
+                     <h3 id="demo"></h3>
+                  </div>
+                  <script>
+                     let person = prompt("Please enter your name", "");
+                     if (person === null || person.length === 0) {
+                        document.getElementById("demo").innerHTML = `Hello,  Stranger`;
+                     } else if (person != null) {
+                        document.getElementById("demo").innerHTML = `Hello,  ${person}`;
+                     }
+                  </script>
+                  <!-- logo icon music -->
+                  <img src="img/make_your_own_playlist__2_-removebg-preview.png" alt="logo" />
+                  <tr>
+                     <td>
+                        <input type="text" name="judul_lagu" id="judul_lagu" placeholder="Judul Lagu" autofocus class="form" />
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <input type="text" name="artis" id="artis" placeholder="Artis" class="form" />
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <input type="text" name="link" id="link" placeholder="Link" class="form" />
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <select name="genre" id="genre" class="form">
+                           <option value="Select Genre">--- Select Genre ---</option>
+                           <option value="R&B">R&B</option>
+                           <option value="Rap">Rap</option>
+                           <option value="j-Pop">j-Pop</option>
+                           <option value="Koplo">Koplo</option>
+                           <option value="Rock">Rock</option>
+                           <option value="Klasik">Klasik</option>
+                           <option value="Pop">Pop</option>
+                           <option value="EDM">EDM</option>
+                        </select>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td colspan="2" class="button">
+                        <button id="addButton" type="button">Tambahkan Lagu</button>
+                        <button id="updateButton" style="display: none" type="button">Update</button>
+                     </td>
+                  </tr>
+               </table>
+               <div class="table">
+                  <input type="text" id="cari" placeholder="Masukan judul lagu / artis" class="form" onkeyup="search()" />
+                  <select id="sort" onchange="sortingBy()" class="sort">
+                     <option value="judul">Judul</option>
+                     <option value="artis">Artis</option>
+                     <option value="genre">Genre</option>
+                  </select>
+                  <table class="cetakTable" id="myTable">
+                     <tr style="text-align: left">
+                        <th>No</th>
+                        <th style="min-width: 257px; max-width: 257px">Judul Lagu</th>
+                        <th>Artis</th>
+                        <th style="width: 100px">Genre</th>
+                        <th colspan="3" style="text-align: center">Action</th>
+                     </tr>
+                     <tbody id="kontenmusik"></tbody>
+                     <!-- Cetak Here -->
+                  </table>
+               </div>
+            </form>
+            <footer>
+               <p>&copy Tobangado - 12 | 2023</p>
+            </footer>
+         </div>
+         <div class="bubble">
+            <img src="./img/bubble.png" alt="" />
+            <img src="./img/bubble.png" alt="" />
+            <img src="./img/bubble.png" alt="" />
+            <img src="./img/bubble.png" alt="" />
+            <img src="./img/bubble.png" alt="" />
+            <img src="./img/bubble.png" alt="" />
+            <img src="./img/bubble.png" alt="" />
+            <img src="./img/bubble.png" alt="" />
+            <img src="./img/bubble.png" alt="" />
+            <img src="./img/bubble.png" alt="" />
+            <img src="./img/bubble.png" alt="" />
+            <img src="./img/bubble.png" alt="" />
+            <img src="./img/bubble.png" alt="" />
+         </div>
+      </div>
+      <script src="js.js"></script>
+   </body>
+</html>
